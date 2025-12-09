@@ -38,9 +38,6 @@ void FidgetApp::onStartup() {
     // Load assets from JSON
     _assets->loadDirectory("json/assets.json");
     
-    // Get the font for labels
-    _font = _assets->get<Font>("sans");
-    
     // Initialize the InputController singleton
     InputController* input = InputController::getInstance();
     input->init();
@@ -72,7 +69,6 @@ void FidgetApp::onShutdown() {
     }
     
     // Clear all resources
-    _font = nullptr;
     _scene = nullptr;
     _batch = nullptr;
     _assets = nullptr;
@@ -90,7 +86,7 @@ void FidgetApp::buildScene() {
     Size scaledSize = displaySize * _screenToSceneScale;
     
     // Create the carousel controller with the scale factor
-    _carousel = SwipeCarouselController::alloc(_scene, scaledSize, _font, _screenToSceneScale);
+    _carousel = SwipeCarouselController::alloc(_scene, scaledSize, _screenToSceneScale);
     
     // Activate button inputs after adding to scene
     _carousel->activateInputs();

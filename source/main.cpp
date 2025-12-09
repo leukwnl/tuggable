@@ -57,7 +57,7 @@ int main(int argc, char * argv[]) {
     
     // The name of your studio (for organizing save files)
     app.setOrganization("Innate Studios");
-
+    
     // Set the window properties (Only applies to OS X/Windows Desktop)
     app.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
     app.setFPS(60.0f);

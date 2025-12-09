@@ -38,9 +38,6 @@ protected:
     /** The carousel controller that manages all fidgetables */
     std::shared_ptr<SwipeCarouselController> _carousel;
     
-    /** The font used for labels */
-    std::shared_ptr<cugl::graphics::Font> _font;
-    
     /** Scale factor from screen to scene coordinates */
     float _screenToSceneScale;
     

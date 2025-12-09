@@ -16,17 +16,17 @@ using namespace cugl::scene2;
 #pragma mark Constructors
 
 SwipeCarouselController::SwipeCarouselController() :
-    _pageWidth(0),
-    _pageHeight(0),
-    _scrollPos(0),
-    _targetScrollPos(0),
-    _isSnapping(false),
-    _snapProgress(0),
-    _snapStartPos(0),
-    _activePageIndex(0),
-    _isDragging(false),
-    _scrollStartPos(0),
-    _screenToSceneScale(1.0f) {
+_pageWidth(0),
+_pageHeight(0),
+_scrollPos(0),
+_targetScrollPos(0),
+_isSnapping(false),
+_snapProgress(0),
+_snapStartPos(0),
+_activePageIndex(0),
+_isDragging(false),
+_scrollStartPos(0),
+_screenToSceneScale(1.0f) {
 }
 
 SwipeCarouselController::~SwipeCarouselController() {
@@ -34,13 +34,11 @@ SwipeCarouselController::~SwipeCarouselController() {
 }
 
 bool SwipeCarouselController::init(std::shared_ptr<Scene2> scene,
-                                    const Size& pageSize,
-                                    std::shared_ptr<Font> font,
-                                    float screenToSceneScale) {
+                                   const Size& pageSize,
+                                   float screenToSceneScale) {
     _scene = scene;
     _pageWidth = pageSize.width;
     _pageHeight = pageSize.height;
-    _font = font;
     _screenToSceneScale = screenToSceneScale;
     
     // Create the container node that will hold all pages
@@ -69,14 +67,13 @@ bool SwipeCarouselController::init(std::shared_ptr<Scene2> scene,
 }
 
 std::shared_ptr<SwipeCarouselController> SwipeCarouselController::alloc(
-    std::shared_ptr<Scene2> scene,
-    const Size& pageSize,
-    std::shared_ptr<Font> font,
-    float screenToSceneScale) {
+                                                                        std::shared_ptr<Scene2> scene,
+                                                                        const Size& pageSize,
+                                                                        float screenToSceneScale) {
     
     std::shared_ptr<SwipeCarouselController> result = 
-        std::make_shared<SwipeCarouselController>();
-    if (result->init(scene, pageSize, font, screenToSceneScale)) {
+    std::make_shared<SwipeCarouselController>();
+    if (result->init(scene, pageSize, screenToSceneScale)) {
         return result;
     }
     return nullptr;
@@ -98,7 +95,6 @@ void SwipeCarouselController::dispose() {
     }
     
     _scene = nullptr;
-    _font = nullptr;
 }
 
 #pragma mark -
@@ -111,49 +107,49 @@ void SwipeCarouselController::buildFidgetables() {
     // This allows for future customization of each toy
     
     // Fidgetable 1
-    auto f1 = Fidgetable1::alloc(pageSize, _font);
+    auto f1 = Fidgetable1::alloc(pageSize);
     f1->getNode()->setPosition(Vec2(0 * _pageWidth, 0));
     _container->addChild(f1->getNode());
     _fidgetables.push_back(f1);
     
     // Fidgetable 2
-    auto f2 = Fidgetable2::alloc(pageSize, _font);
+    auto f2 = Fidgetable2::alloc(pageSize);
     f2->getNode()->setPosition(Vec2(1 * _pageWidth, 0));
     _container->addChild(f2->getNode());
     _fidgetables.push_back(f2);
     
     // Fidgetable 3
-    auto f3 = Fidgetable3::alloc(pageSize, _font);
+    auto f3 = Fidgetable3::alloc(pageSize);
     f3->getNode()->setPosition(Vec2(2 * _pageWidth, 0));
     _container->addChild(f3->getNode());
     _fidgetables.push_back(f3);
     
     // Fidgetable 4
-    auto f4 = Fidgetable4::alloc(pageSize, _font);
+    auto f4 = Fidgetable4::alloc(pageSize);
     f4->getNode()->setPosition(Vec2(3 * _pageWidth, 0));
     _container->addChild(f4->getNode());
     _fidgetables.push_back(f4);
     
     // Fidgetable 5
-    auto f5 = Fidgetable5::alloc(pageSize, _font);
+    auto f5 = Fidgetable5::alloc(pageSize);
     f5->getNode()->setPosition(Vec2(4 * _pageWidth, 0));
     _container->addChild(f5->getNode());
     _fidgetables.push_back(f5);
     
     // Fidgetable 6
-    auto f6 = Fidgetable6::alloc(pageSize, _font);
+    auto f6 = Fidgetable6::alloc(pageSize);
     f6->getNode()->setPosition(Vec2(5 * _pageWidth, 0));
     _container->addChild(f6->getNode());
     _fidgetables.push_back(f6);
     
     // Fidgetable 7
-    auto f7 = Fidgetable7::alloc(pageSize, _font);
+    auto f7 = Fidgetable7::alloc(pageSize);
     f7->getNode()->setPosition(Vec2(6 * _pageWidth, 0));
     _container->addChild(f7->getNode());
     _fidgetables.push_back(f7);
     
     // Fidgetable 8
-    auto f8 = Fidgetable8::alloc(pageSize, _font);
+    auto f8 = Fidgetable8::alloc(pageSize);
     f8->getNode()->setPosition(Vec2(7 * _pageWidth, 0));
     _container->addChild(f8->getNode());
     _fidgetables.push_back(f8);

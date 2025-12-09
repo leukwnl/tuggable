@@ -22,21 +22,18 @@ using namespace cugl::scene2;
 #pragma mark Constructors
 
 FidgetableView::FidgetableView() :
-    _index(0),
-    _isActive(false),
-    _circleRadius(100.0f) {
+_index(0),
+_isActive(false),
+_circleRadius(100.0f) {
 }
 
 FidgetableView::~FidgetableView() {
     dispose();
 }
 
-bool FidgetableView::init(int index, const Size& pageSize, 
-                          std::shared_ptr<Font> font) {
+bool FidgetableView::init(int index, const Size& pageSize) {
     _index = index;
     _pageSize = pageSize;
-    _font = font;
-    _name = "Fidgetable " + std::to_string(index);
     _circleRadius = pageSize.width * CIRCLE_RADIUS_RATIO;
     _isActive = false;
     
@@ -51,11 +48,10 @@ bool FidgetableView::init(int index, const Size& pageSize,
     return true;
 }
 
-std::shared_ptr<FidgetableView> FidgetableView::alloc(int index, 
-                                                       const Size& pageSize,
-                                                       std::shared_ptr<Font> font) {
+std::shared_ptr<FidgetableView> FidgetableView::alloc(int index,
+                                                      const Size& pageSize) {
     std::shared_ptr<FidgetableView> result = std::make_shared<FidgetableView>();
-    if (result->init(index, pageSize, font)) {
+    if (result->init(index, pageSize)) {
         return result;
     }
     return nullptr;
@@ -70,7 +66,6 @@ void FidgetableView::dispose() {
     _circleNode = nullptr;
     _label = nullptr;
     _rootNode = nullptr;
-    _font = nullptr;
 }
 
 #pragma mark -
@@ -105,24 +100,11 @@ void FidgetableView::buildContent() {
     
     // Add button to root node
     _rootNode->addChild(_circleButton);
-    
-    // Create the label below the circle
-    if (_font != nullptr) {
-        _label = Label::allocWithText(_name, _font);
-        _label->setAnchor(Vec2::ANCHOR_CENTER);
-        _label->setForeground(LABEL_COLOR);
-        
-        // Position label below the circle with some padding
-        float labelY = centerPos.y - _circleRadius - 60;
-        _label->setPosition(Vec2(_pageSize.width / 2, labelY));
-        
-        _rootNode->addChild(_label);
-    }
 }
 
-std::shared_ptr<PolygonNode> FidgetableView::createCircle(float radius, 
-                                                           Color4 color, 
-                                                           int segments) {
+std::shared_ptr<PolygonNode> FidgetableView::createCircle(float radius,
+                                                          Color4 color,
+                                                          int segments) {
     // Create a filled circle using a polygon
     std::vector<Vec2> vertices;
     vertices.reserve(segments + 1);

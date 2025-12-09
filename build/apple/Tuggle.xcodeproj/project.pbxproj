@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB084F9D0E7DEE813F658313 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = AACD441E407C552AECEE9B33 /* textures */; };
+		ABBCECE05884D7F0EED5F50D /* json in Resources */ = {isa = PBXBuildFile; fileRef = AA1BA6EDE03659A8C6BB7FDA /* json */; };
+		ABEB4F30ABE79246F2AF327A /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AACD79EE60E78EEA58EF7CC9 /* fonts */; };
+		AC10714DD914A0EC4CEC5CF1 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = AACD441E407C552AECEE9B33 /* textures */; };
+		AC2EB3AC451FF1B57CEECEE3 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AACD79EE60E78EEA58EF7CC9 /* fonts */; };
+		ACDAB563BDDE187B5BC53C62 /* json in Resources */ = {isa = PBXBuildFile; fileRef = AA1BA6EDE03659A8C6BB7FDA /* json */; };
+		BB0C5A5D28A65554CEF76EE4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA74D663E7C15A3342E7A1F8 /* main.cpp */; };
+		BB7BCBEF7D9B95ACCBCD93A1 /* FidgetApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA022E8353ED6FBDEB472EC6 /* FidgetApp.cpp */; };
+		BBE3FCF6D3DDCA82CABE21AB /* InputController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */; };
+		BBEB7F91FDDBC4F7D67CDB76 /* FidgetableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9FAC0D6FAEBC2C4D71ABEF /* FidgetableView.cpp */; };
+		BBF60F12DBFDFA4EBA88AD6F /* SwipeCarouselController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA6304BA0BCEEEBCDA71EDEF /* SwipeCarouselController.cpp */; };
+		BC1BA06BBD42FF24AB5B0AF5 /* InputController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */; };
+		BC5FDE54BC9D22BD66C2FF7C /* FidgetApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA022E8353ED6FBDEB472EC6 /* FidgetApp.cpp */; };
+		BC6E3B58AED5F38C17FA6FE3 /* SwipeCarouselController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA6304BA0BCEEEBCDA71EDEF /* SwipeCarouselController.cpp */; };
+		BC98F44CAECC5CA61B5E4CAC /* FidgetableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9FAC0D6FAEBC2C4D71ABEF /* FidgetableView.cpp */; };
+		BCFAAB022CD9CD93B6D5BD01 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA74D663E7C15A3342E7A1F8 /* main.cpp */; };
 		EB0F3CB827FB9FD40037CC66 /* Mac.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0F3CB327FB9FD40037CC66 /* Mac.xcassets */; };
 		EB0F3CD527FBA2190037CC66 /* ForceFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F3CC727FBA2180037CC66 /* ForceFeedback.framework */; };
 		EB0F3CD627FBA2190037CC66 /* CoreHaptics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F3CC827FBA2180037CC66 /* CoreHaptics.framework */; };
@@ -58,22 +74,6 @@
 		EBDD8151293CE9F9000BED3C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD8144293CE9F9000BED3C /* CoreMotion.framework */; };
 		EBDD8154293CEA45000BED3C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD8152293CEA45000BED3C /* AudioToolbox.framework */; };
 		EBDD8155293CEA45000BED3C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDD8153293CEA45000BED3C /* AVFoundation.framework */; };
-		AB084F9D0E7DEE813F658313 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = AACD441E407C552AECEE9B33 /* textures */; };
-		AC10714DD914A0EC4CEC5CF1 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = AACD441E407C552AECEE9B33 /* textures */; };
-		ABBCECE05884D7F0EED5F50D /* json in Resources */ = {isa = PBXBuildFile; fileRef = AA1BA6EDE03659A8C6BB7FDA /* json */; };
-		ACDAB563BDDE187B5BC53C62 /* json in Resources */ = {isa = PBXBuildFile; fileRef = AA1BA6EDE03659A8C6BB7FDA /* json */; };
-		ABEB4F30ABE79246F2AF327A /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AACD79EE60E78EEA58EF7CC9 /* fonts */; };
-		AC2EB3AC451FF1B57CEECEE3 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AACD79EE60E78EEA58EF7CC9 /* fonts */; };
-		BBE3FCF6D3DDCA82CABE21AB /* InputController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */; };
-		BC1BA06BBD42FF24AB5B0AF5 /* InputController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */; };
-		BBEB7F91FDDBC4F7D67CDB76 /* FidgetableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9FAC0D6FAEBC2C4D71ABEF /* FidgetableView.cpp */; };
-		BC98F44CAECC5CA61B5E4CAC /* FidgetableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9FAC0D6FAEBC2C4D71ABEF /* FidgetableView.cpp */; };
-		BB7BCBEF7D9B95ACCBCD93A1 /* FidgetApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA022E8353ED6FBDEB472EC6 /* FidgetApp.cpp */; };
-		BC5FDE54BC9D22BD66C2FF7C /* FidgetApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA022E8353ED6FBDEB472EC6 /* FidgetApp.cpp */; };
-		BBF60F12DBFDFA4EBA88AD6F /* SwipeCarouselController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA6304BA0BCEEEBCDA71EDEF /* SwipeCarouselController.cpp */; };
-		BC6E3B58AED5F38C17FA6FE3 /* SwipeCarouselController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA6304BA0BCEEEBCDA71EDEF /* SwipeCarouselController.cpp */; };
-		BB0C5A5D28A65554CEF76EE4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA74D663E7C15A3342E7A1F8 /* main.cpp */; };
-		BCFAAB022CD9CD93B6D5BD01 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA74D663E7C15A3342E7A1F8 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +150,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EB0F3C9627FB9DCB0037CC66 /* Tuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tuggle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA1BA6EDE03659A8C6BB7FDA /* json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = json; sourceTree = "<group>"; };
+		AACD441E407C552AECEE9B33 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
+		AACD79EE60E78EEA58EF7CC9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		BA00F3F1CAA10A63D5A6EAC3 /* Fidgetable1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable1.h; sourceTree = "<group>"; };
+		BA022E8353ED6FBDEB472EC6 /* FidgetApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FidgetApp.cpp; sourceTree = "<group>"; };
+		BA113FFE332D06C549B7CAEA /* Fidgetable4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable4.h; sourceTree = "<group>"; };
+		BA2AE41A7FBBC3FCE9FAEA00 /* Fidgetable6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable6.h; sourceTree = "<group>"; };
+		BA60F0D5AE521B420CDEDF53 /* Fidgetable3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable3.h; sourceTree = "<group>"; };
+		BA6304BA0BCEEEBCDA71EDEF /* SwipeCarouselController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SwipeCarouselController.cpp; sourceTree = "<group>"; };
+		BA72EAFFA9B606061AEB48A7 /* Fidgetable2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable2.h; sourceTree = "<group>"; };
+		BA74D663E7C15A3342E7A1F8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BA8334F4FC3C7CE5BB59C6BF /* Fidgetable5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable5.h; sourceTree = "<group>"; };
+		BA91C6B4F2EBB26FA20B0EF9 /* Fidgetable8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable8.h; sourceTree = "<group>"; };
+		BA9FAC0D6FAEBC2C4D71ABEF /* FidgetableView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FidgetableView.cpp; sourceTree = "<group>"; };
+		BAA5BDF05FF2E6AD31DB32EE /* SwipeCarouselController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCarouselController.h; sourceTree = "<group>"; };
+		BAAED006E4DDC00B4DBD247D /* Fidgetable7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fidgetable7.h; sourceTree = "<group>"; };
+		BACCFFB3D3D1F94F5EFAB644 /* FidgetableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FidgetableView.h; sourceTree = "<group>"; };
+		BAEDED600B138CEC5AFFF3DB /* FidgetApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FidgetApp.h; sourceTree = "<group>"; };
+		BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputController.cpp; sourceTree = "<group>"; };
+		BAF58FAECACE8E1675ECEF62 /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
+		EB0F3C9627FB9DCB0037CC66 /* Tuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0F3CB027FB9FD40037CC66 /* Landscape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landscape.storyboard; sourceTree = "<group>"; };
 		EB0F3CB127FB9FD40037CC66 /* iOS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOS.xcassets; sourceTree = "<group>"; };
 		EB0F3CB227FB9FD40037CC66 /* macos.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = macos.entitlements; sourceTree = "<group>"; };
@@ -171,8 +191,8 @@
 		EB0F3CD327FBA2190037CC66 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		EB0F3CD427FBA2190037CC66 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		EB163904295693D90090F7D4 /* cugl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cugl.xcodeproj; path = cugl/cugl.xcodeproj; sourceTree = "<group>"; };
-		EB6E0E5D298C1A3300704E87 /* licenses */ = {isa = PBXFileReference; lastKnownFileType = folder; name = licenses; path = "../../../../cugl/licenses"; sourceTree = "<group>"; };
-		EBC7AEC227FBB41F001F1467 /* Tuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tuggle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB6E0E5D298C1A3300704E87 /* licenses */ = {isa = PBXFileReference; lastKnownFileType = folder; name = licenses; path = ../../../../cugl/licenses; sourceTree = "<group>"; };
+		EBC7AEC227FBB41F001F1467 /* Tuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC7AEF027FBBEF5001F1467 /* ios.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ios.plist; sourceTree = "<group>"; };
 		EBDD8138293CE9F8000BED3C /* CoreHaptics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreHaptics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreHaptics.framework; sourceTree = DEVELOPER_DIR; };
 		EBDD8139293CE9F8000BED3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -191,26 +211,6 @@
 		EBDD8153293CEA45000BED3C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		EBE2E0132B794B930091FF11 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
 		EBE2E0172B794BED0091FF11 /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = DEVELOPER_DIR; };
-		AACD441E407C552AECEE9B33 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
-		AA1BA6EDE03659A8C6BB7FDA /* json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = json; sourceTree = "<group>"; };
-		AACD79EE60E78EEA58EF7CC9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
-		BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; path = InputController.cpp; sourceTree = "<group>"; };
-		BA9FAC0D6FAEBC2C4D71ABEF /* FidgetableView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; path = FidgetableView.cpp; sourceTree = "<group>"; };
-		BA022E8353ED6FBDEB472EC6 /* FidgetApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; path = FidgetApp.cpp; sourceTree = "<group>"; };
-		BA6304BA0BCEEEBCDA71EDEF /* SwipeCarouselController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; path = SwipeCarouselController.cpp; sourceTree = "<group>"; };
-		BA74D663E7C15A3342E7A1F8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; path = main.cpp; sourceTree = "<group>"; };
-		BAAED006E4DDC00B4DBD247D /* Fidgetable7.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable7.h; sourceTree = "<group>"; };
-		BAEDED600B138CEC5AFFF3DB /* FidgetApp.h */ = {isa = PBXFileReference; fileEncoding = 4; path = FidgetApp.h; sourceTree = "<group>"; };
-		BAF58FAECACE8E1675ECEF62 /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = InputController.h; sourceTree = "<group>"; };
-		BACCFFB3D3D1F94F5EFAB644 /* FidgetableView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = FidgetableView.h; sourceTree = "<group>"; };
-		BA60F0D5AE521B420CDEDF53 /* Fidgetable3.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable3.h; sourceTree = "<group>"; };
-		BA113FFE332D06C549B7CAEA /* Fidgetable4.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable4.h; sourceTree = "<group>"; };
-		BA8334F4FC3C7CE5BB59C6BF /* Fidgetable5.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable5.h; sourceTree = "<group>"; };
-		BA00F3F1CAA10A63D5A6EAC3 /* Fidgetable1.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable1.h; sourceTree = "<group>"; };
-		BAA5BDF05FF2E6AD31DB32EE /* SwipeCarouselController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SwipeCarouselController.h; sourceTree = "<group>"; };
-		BA2AE41A7FBBC3FCE9FAEA00 /* Fidgetable6.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable6.h; sourceTree = "<group>"; };
-		BA72EAFFA9B606061AEB48A7 /* Fidgetable2.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable2.h; sourceTree = "<group>"; };
-		BA91C6B4F2EBB26FA20B0EF9 /* Fidgetable8.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Fidgetable8.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,7 +319,7 @@
 				BA91C6B4F2EBB26FA20B0EF9 /* Fidgetable8.h */,
 			);
 			name = Source;
-			path = "../../source";
+			path = ../../source;
 			sourceTree = "<group>";
 		};
 		EB0F3CAE27FB9F700037CC66 /* Resources */ = {
@@ -391,7 +391,7 @@
 				AACD79EE60E78EEA58EF7CC9 /* fonts */,
 			);
 			name = Assets;
-			path = "../../assets";
+			path = ../../assets;
 			sourceTree = "<group>";
 		};
 		EBC7AEB927FBB280001F1467 /* ios */ = {
@@ -472,7 +472,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EB0F3C9127FB9DCB0037CC66 /* Build configuration list for PBXProject "app" */;
+			buildConfigurationList = EB0F3C9127FB9DCB0037CC66 /* Build configuration list for PBXProject "Tuggle" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -740,9 +740,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -779,11 +777,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"GL_SILENCE_DEPRECATION=1",
 				);
+				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SDL_INCLUDES)",
 					"$(CUGL_INCLUDES)",
@@ -800,7 +798,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cornell.gdiac.fidget.mac.G4EBEX69;
-				PRODUCT_NAME = "Tuggle";
+				PRODUCT_NAME = Tuggle;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -818,11 +816,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
-				GENERATE_INFOPLIST_FILE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"GL_SILENCE_DEPRECATION=1",
 				);
+				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SDL_INCLUDES)",
 					"$(CUGL_INCLUDES)",
@@ -839,7 +837,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cornell.gdiac.fidget.mac.G4EBEX69;
-				PRODUCT_NAME = "Tuggle";
+				PRODUCT_NAME = Tuggle;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -853,14 +851,14 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 69848UR4YF;
+				DEVELOPMENT_TEAM = Y6ND74X834;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
-				GENERATE_INFOPLIST_FILE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"GLES_SILENCE_DEPRECATION=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SDL_INCLUDES)",
 					"$(CUGL_INCLUDES)",
@@ -875,15 +873,13 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cornell.gdiac.fidget.ios.G4EBEX69;
-				PRODUCT_NAME = "Tuggle";
+				PRODUCT_NAME = Tuggle;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -898,14 +894,14 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 69848UR4YF;
+				DEVELOPMENT_TEAM = Y6ND74X834;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
-				GENERATE_INFOPLIST_FILE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"GLES_SILENCE_DEPRECATION=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SDL_INCLUDES)",
 					"$(CUGL_INCLUDES)",
@@ -920,15 +916,13 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.cornell.gdiac.fidget.ios.G4EBEX69;
-				PRODUCT_NAME = "Tuggle";
+				PRODUCT_NAME = Tuggle;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -939,7 +933,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB0F3C9127FB9DCB0037CC66 /* Build configuration list for PBXProject "app" */ = {
+		EB0F3C9127FB9DCB0037CC66 /* Build configuration list for PBXProject "Tuggle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB0F3CA727FB9DCC0037CC66 /* Debug */,
@@ -967,8 +961,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = EB0F3C8E27FB9DCB0037CC66 /* Project object */;
 }
-

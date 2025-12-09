@@ -18,15 +18,13 @@ public:
     Fidgetable7() : FidgetableView() {}
     virtual ~Fidgetable7() {}
     
-    bool init(int index, const cugl::Size& pageSize,
-              std::shared_ptr<cugl::graphics::Font> font) override {
-        return FidgetableView::init(index, pageSize, font);
+    bool init(int index, const cugl::Size& pageSize) override {
+        return FidgetableView::init(index, pageSize);
     }
     
-    static std::shared_ptr<Fidgetable7> alloc(const cugl::Size& pageSize,
-                                               std::shared_ptr<cugl::graphics::Font> font) {
+    static std::shared_ptr<Fidgetable7> alloc(const cugl::Size& pageSize) {
         std::shared_ptr<Fidgetable7> result = std::make_shared<Fidgetable7>();
-        if (result->init(7, pageSize, font)) {
+        if (result->init(7, pageSize)) {
             return result;
         }
         return nullptr;

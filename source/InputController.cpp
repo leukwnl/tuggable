@@ -31,20 +31,20 @@ InputController* InputController::_instance = nullptr;
  * This constructor does NOT do any initialization. It simply allocates the
  * object. All initialization is done via the init() method.
  */
-InputController::InputController()
-    : _active(false),
-      _mouse(nullptr),
-      _keyboard(nullptr),
-      _touch(nullptr),
-      _pointerDown(false),
-      _tapped(false),
-      _doubleTapped(false),
-      _dragging(false),
-      _dragStarted(false),
-      _dragEnded(false),
-      _tapHoldDetected(false),
-      _swipeDetected(false),
-      _moving(false) {
+InputController::InputController():
+_active(false),
+_mouse(nullptr),
+_keyboard(nullptr),
+_touch(nullptr),
+_pointerDown(false),
+_tapped(false),
+_doubleTapped(false),
+_dragging(false),
+_dragStarted(false),
+_dragEnded(false),
+_tapHoldDetected(false),
+_swipeDetected(false),
+_moving(false) {
     // Initialize vectors to zero
     _currPos.setZero();
     _prevPos.setZero();
@@ -64,16 +64,16 @@ InputController::InputController()
 bool InputController::init() {
     _lastTapTime.mark();
     _pressStartTime.mark();
-
+    
     bool success = true;
-
+    
 #ifndef CU_TOUCH_SCREEN
     // Initialize keyboard if available
     success = Input::activate<Keyboard>();
     if (success) {
         _keyboard = Input::get<Keyboard>();
     }
-
+    
     // Initialize mouse if available
     success = Input::activate<Mouse>();
     if (success) {
@@ -89,7 +89,7 @@ bool InputController::init() {
     }
 #endif
     Input::activate<TextInput>();
-
+    
     return success;
 }
 
@@ -104,17 +104,17 @@ bool InputController::start() {
     if (_active) {
         return false;
     }
-
+    
 #ifndef CU_TOUCH_SCREEN
     if (_mouse != nullptr) {
         _mouse->addPressListener(LISTENER_KEY, [this](const MouseEvent& event, Uint8 clicks, bool focus) {
             this->mousePressedCB(event, clicks, focus);
         });
-
+        
         _mouse->addReleaseListener(LISTENER_KEY, [this](const MouseEvent& event, Uint8 clicks, bool focus) {
             this->mouseReleasedCB(event, clicks, focus);
         });
-
+        
         _mouse->addDragListener(LISTENER_KEY, [this](const MouseEvent& event, const Vec2& previous, bool focus) {
             this->mouseDraggedCB(event, previous, focus);
         });
@@ -123,16 +123,16 @@ bool InputController::start() {
     if (_touch != nullptr) {
         _touch->addBeginListener(LISTENER_KEY,
                                  [this](const TouchEvent& event, bool focus) { this->touchBeganCB(event, focus); });
-
+        
         _touch->addEndListener(LISTENER_KEY,
                                [this](const TouchEvent& event, bool focus) { this->touchEndedCB(event, focus); });
-
+        
         _touch->addMotionListener(LISTENER_KEY, [this](const TouchEvent& event, const Vec2& previous, bool focus) {
             this->touchMovedCB(event, previous, focus);
         });
     }
 #endif
-
+    
     _active = true;
     return true;
 }
@@ -164,7 +164,7 @@ void InputController::stop() {
     Input::deactivate<Touchscreen>();
 #endif
     Input::deactivate<TextInput>();
-
+    
     _active = false;
 }
 
@@ -186,13 +186,13 @@ void InputController::update(float dt) {
         _prevPos = _currPos;
         // proper previous position stored when listener even is activated
     }
-
+    
 #ifndef CU_TOUCH_SCREEN
     if (_mouse != nullptr) {
         // Update mouse position
         // updated in all the listeners so I think its okay not being here???
         //_currPos = _mouse->pointerPosition();
-
+        
         // Check for tap-and-hold
         if (_pointerDown && !_dragging && !_tapHoldDetected) {
             Timestamp now;
@@ -201,7 +201,7 @@ void InputController::update(float dt) {
                 _tapHoldDetected = true;
             }
         }
-
+        
         // Check for drag starting (if button is down and moved beyond
         // threshold)
         float moveDistance = (_currPos - _startPos).length();
@@ -210,7 +210,7 @@ void InputController::update(float dt) {
             _dragStarted = true;
         }
     }
-#endif
+#endif // !CU_TOUCH_SCREEN
 }
 
 /**
@@ -227,13 +227,13 @@ void InputController::clear() {
     _tapHoldDetected = false;
     _swipeDetected = false;
     _moving = false;
-
+    
     // Reset all position values
     _currPos.setZero();
     _prevPos.setZero();
     _startPos.setZero();
     _swipeVelocity.setZero();
-
+    
     // Reset timestamps
     _lastTapTime.mark();
     _pressStartTime.mark();
@@ -270,7 +270,7 @@ void InputController::pointerBeganCB(const Vec2& pos, const Timestamp& stamp) {
     if (_lastTapTime.ellapsedMillis(stamp) <= DEFAULT_DOUBLE_TAP_TIME) {
         _doubleTapped = true;
     }
-
+    
     // Record the start of interaction
     _pointerDown = true;
     _pressStartTime = stamp;
@@ -291,7 +291,7 @@ void InputController::pointerEndedCB(const Vec2& pos, const Timestamp& stamp) {
     _prevPos = _currPos;
     // _prevPos and _currPos are the same because we only care about position
     // change when dragging
-
+    
     // Check for single tap
     float moveDistance = (pos - _startPos).length();
     if (!_dragging && !_tapHoldDetected && moveDistance < DEFAULT_DRAG_THRESHOLD &&
@@ -299,18 +299,18 @@ void InputController::pointerEndedCB(const Vec2& pos, const Timestamp& stamp) {
         _tapped = true;
         _lastTapTime = stamp;
     }
-
+    
     // Check for swipe
     if (moveDistance >= DEFAULT_SWIPE_MIN_DISTANCE && stamp.ellapsedMillis(_pressStartTime) <= DEFAULT_SWIPE_MAX_TIME) {
         _swipeDetected = true;
-
+        
         // Calculate velocity (pixels per second)
         float elapsedTime = stamp.ellapsedMillis(_pressStartTime) / 1000.0f;
         if (elapsedTime > 0) {
             _swipeVelocity = (pos - _startPos) / elapsedTime;
         }
     }
-
+    
     // Handle drag end if we were dragging
     if (_dragging) {
         _dragging = false;
@@ -328,7 +328,7 @@ void InputController::pointerMovedCB(const Vec2& pos, const Vec2& previous) {
     _prevPos = _currPos;
     _currPos = pos;
     _moving = true;
-
+    
     // Check for drag starting
     if (_pointerDown && !_dragging) {
         float moveDistance = (pos - _startPos).length();

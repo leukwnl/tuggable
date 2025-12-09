@@ -62,9 +62,6 @@ protected:
     /** The radius of the circle button */
     float _circleRadius;
     
-    /** Reference to font for creating label */
-    std::shared_ptr<cugl::graphics::Font> _font;
-    
     /**
      * Creates the visual content for this fidgetable.
      * Override in subclasses to customize appearance.
@@ -100,23 +97,19 @@ public:
      * 
      * @param index     The index of this fidgetable (1-8)
      * @param pageSize  The size of each page in the carousel
-     * @param font      The font to use for the label
      * @return true if initialization was successful
      */
-    virtual bool init(int index, const cugl::Size& pageSize, 
-                      std::shared_ptr<cugl::graphics::Font> font);
+    virtual bool init(int index, const cugl::Size& pageSize);
     
     /**
      * Static allocator for FidgetableView.
      * 
      * @param index     The index of this fidgetable (1-8)
      * @param pageSize  The size of each page in the carousel
-     * @param font      The font to use for the label
      * @return A newly allocated FidgetableView
      */
     static std::shared_ptr<FidgetableView> alloc(int index, 
-                                                  const cugl::Size& pageSize,
-                                                  std::shared_ptr<cugl::graphics::Font> font);
+                                                  const cugl::Size& pageSize);
     
     /**
      * Disposes of all resources used by this fidgetable.

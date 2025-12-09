@@ -100,9 +100,6 @@ protected:
     /** Position where drag started (for delta calculation) */
     cugl::Vec2 _dragStartPos;
     
-    /** Reference to the font for creating labels */
-    std::shared_ptr<cugl::graphics::Font> _font;
-    
     /** Scale factor from screen to scene coordinates */
     float _screenToSceneScale;
     
@@ -173,13 +170,11 @@ public:
      * 
      * @param scene     The scene to add the carousel to
      * @param pageSize  The size of each page
-     * @param font      The font for labels
      * @param screenToSceneScale  Scale factor for coordinate conversion
      * @return true if initialization succeeded
      */
     bool init(std::shared_ptr<cugl::scene2::Scene2> scene,
               const cugl::Size& pageSize,
-              std::shared_ptr<cugl::graphics::Font> font,
               float screenToSceneScale = 1.0f);
     
     /**
@@ -188,7 +183,6 @@ public:
     static std::shared_ptr<SwipeCarouselController> alloc(
         std::shared_ptr<cugl::scene2::Scene2> scene,
         const cugl::Size& pageSize,
-        std::shared_ptr<cugl::graphics::Font> font,
         float screenToSceneScale = 1.0f);
     
     /**
