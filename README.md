@@ -1,7 +1,7 @@
 <div align="center">
 
 # Tuggle
-### Mobile fidget toys built on CUGL
+### Fidget toys for mobile, built on CUGL
 
 <p>
   <img width="280" height="1024" alt="logo" src="https://github.com/user-attachments/assets/2e696841-ba03-4846-89ea-ce1156032fd9" />
